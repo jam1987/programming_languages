@@ -1,0 +1,350 @@
+\documentclass[12pt,a4paper,spanish]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+
+\begin{document}
+
+\begin{figure}
+  \centering
+    \includegraphics{/Users/julio/Documents/CI3661/HASKELL/logo.jpg}
+     \\ Universidad Sim\'on Bol\'ivar
+     \\ Depto. De Computaci\'on y Tecnolog\'ia de la Informaci\'on
+     \\ CI3661: Laboratorio de Lenguajes de Programaci\'on 
+\end{figure} 
+
+\title{Tarea 3}
+\author{Williams Mari\~no\\
+        Julio De Abreu 05-38072}
+
+\maketitle
+\newpage
+
+\begin{enumerate}
+\item 
+\newline
+a) 
+\newline
+\lstset{language=prolog, breaklines=True, basicstyle=\footnotesize}
+\begin{lstlisting}{frame=single}
+%% Implantacion del predicado sumar
+sumar(estrella,X,X).
+sumar(X,estrella,X).
+sumar(up(X),Y,up(Z)):-sumar(X,Y,Z).
+\end{lstlisting}
+\newline
+\newline
+b) 
+\lstset{language=prolog, breaklines=True, basicstyle=\footnotesize}
+\begin{lstlisting}{frame=single}
+%% Implantacion del predicado restar
+restar(estrella,X,X).
+restar(up(X), Y, Z):-restar(X,Y,Z).
+\end{lstlisting}
+\newline
+\newline
+c) 
+\lstset{language=prolog, breaklines=True, basicstyle=\footnotesize}
+\begin{lstlisting}{frame=single}
+%% Implantacion del predicado producto
+producto(_,estrella,estrella).
+producto(up(estrella),X,X).
+producto(X,up(Y),Z):-sumar(X,Y,Z1),producto(X,Z1,Z).
+\end{lstlisting}
+
+\emph{Investigaci\'on}
+\newline
+\newline
+a) P(x) \emph{and}\ Q(y)
+\newline
+P(x) : 3
+\newline
+Q(y) : 3
+\newline
+1) P(a) \emph{and}\ Q(a)
+\newline
+2) P(a) \emph{and}\ Q(b)
+\newline
+3) P(a) \emph{and}\ Q(c)
+\newline
+4) P(b) \emph{and}\ Q(a)
+\newline
+5) P(b) \emph{and}\ Q(b)
+\newline
+6) P(b) \emph{and}\ Q(c)
+\newline
+7) P(c) \emph{and}\ Q(a)
+\newline
+8) P(c) \emph{and}\ Q(b)
+\newline
+9) P(c) \emph{and}\ Q(c)
+\newline
+\newline
+Total: 9 posibles formulas.
+\newline
+\newline
+b) Tomando las formulas de la parte d), se logro sacar la siguiente cuenta:
+\newline
+\newline
+18+9+18+18+9+27=99 posibles formulas.
+\newline
+\newline
+c) P(f(a)) \emph{and} Q(g(a,b))
+\newline
+   P(f(a)) \emph{and} Q(g(a,c))
+   \newline
+   P(f(a)) \emph{and} Q(g(b,c))
+   \newline
+   P(f(b)) \emph{and} Q(g(a,b))
+   \newline
+   P(f(b)) \emph{and} Q(g(a,c))
+   \newline
+   P(f(b)) \emph{and} Q(g(b,c))
+   \newline
+   P(f(c)) \emph{and} Q(g(a,b))
+   \newline
+   P(f(c)) \emph{and} Q(g(a,c))
+   \newline
+   P(f(c)) \emph{and} Q(g(b,c))
+   \newline
+   P(f(a)) \emph{and} Q(g(b,a))
+   \newline
+   P(f(a)) \emph{and} Q(g(c,a))
+   \newline
+   P(f(a)) \emph{and} Q(g(c,b))
+   \newline
+   P(f(b)) \emph{and} Q(g(b,a))
+   \newline
+   P(f(b)) \emph{and} Q(g(c,a))
+   \newline
+   P(f(b)) \emph{and} Q(g(c,b))
+   \newline
+   P(f(c)) \emph{and} Q(g(b,a))
+   \newline
+   P(f(c)) \emph{and} Q(g(c,a))
+   \newline
+   P(f(c)) \emph{and} Q(g(c,b))
+   \newline
+   \newline
+   P(f(a)) \emph{and} Q(f(a))
+   \newline
+   P(f(a)) \emph{and} Q(f(b))
+   \newline
+   P(f(a)) \emph{and} Q(f(c))
+   \newline
+   P(f(b)) \emph{and} Q(f(a))
+   \newline
+   P(f(b)) \emph{and} Q(f(b))
+   \newline
+   P(f(b)) \emph{and} Q(f(c))
+   \newline
+   P(f(c)) \emph{and} Q(f(a))
+   \newline
+   P(f(c)) \emph{and} Q(f(b))
+   \newline
+   P(f(c)) \emph{and} Q(f(c))
+   \newline
+   \newline
+   P(g(a,b)) \emph{and} Q(g(a,b))
+   \newline
+   P(g(a,b)) \emph{and} Q(g(a,c))
+   \newline
+   P(g(a,b)) \emph{and} Q(g(b,c))
+   \newline
+   P(g(a,b)) \emph{and} Q(g(b,a))
+   \newline
+   P(g(a,b)) \emph{and} Q(g(c,a))
+   \newline
+   P(g(a,b)) \emph{and} Q(g(c,b))
+   \newline
+   P(g(a,c)) \emph{and} Q(g(a,b))
+   \newline
+   P(g(a,c)) \emph{and} Q(g(a,c))
+   \newline
+   P(g(a,c)) \emph{and} Q(g(b,c))
+   \newline
+   P(g(a,c)) \emph{and} Q(g(b,a))
+   \newline
+   P(g(a,c)) \emph{and} Q(g(b,c))
+   \newline
+   P(g(a,c)) \emph{and} Q(g(c,a))
+   \newline
+   P(g(b,c)) \emph{and} Q(g(a,b))
+   \newline
+   P(g(b,c)) \emph{and} Q(g(a,c))
+   \newline
+   P(g(b,c)) \emph{and} Q(g(b,c))
+   \newline
+   P(g(b,c)) \emph{and} Q(g(b,a))
+   \newline
+   P(g(b,c)) \emph{and} Q(g(b,c))
+   \newline
+   P(g(b,c)) \emph{and} Q(g(c,a))
+   \newline
+   \newline
+   P(g(b,a)) \emph{and} Q(g(a,b))
+   \newline
+   P(g(b,a)) \emph{and} Q(g(a,c))
+   \newline
+   P(g(b,a)) \emph{and} Q(g(b,c))
+   \newline
+   P(g(b,a)) \emph{and} Q(g(b,a))
+   \newline
+   P(g(b,a)) \emph{and} Q(g(c,a))
+   \newline
+   P(g(b,a)) \emph{and} Q(g(c,b))
+   \newline
+   P(g(c,a)) \emph{and} Q(g(a,b))
+   \newline
+   P(g(c,a)) \emph{and} Q(g(a,c))
+   \newline
+   P(g(c,a)) \emph{and} Q(g(b,c))
+   \newline
+   P(g(c,a)) \emph{and} Q(g(b,a))
+   \newline
+   P(g(c,a)) \emph{and} Q(g(b,c))
+   \newline
+   P(g(c,a)) \emph{and} Q(g(c,a))
+   \newline
+   P(g(c,b)) \emph{and} Q(g(a,b))
+   \newline
+   P(g(c,b)) \emph{and} Q(g(a,c))
+   \newline
+   P(g(c,b)) \emph{and} Q(g(b,c))
+   \newline
+   P(g(c,b)) \emph{and} Q(g(b,a))
+   \newline
+   P(g(c,b)) \emph{and} Q(g(b,c))
+   \newline
+   P(g(c,b)) \emph{and} Q(g(c,a))
+   \newline
+   \newline   
+   Luego, dado que la conjuncion es simetrica, podemos obtener lo siguiente:
+   \newline
+   Q(f(a)) \emph{and} P(g(a,b))
+   \newline
+   Q(f(a)) \emph{and} P(g(a,c))
+   \newline
+   Q(f(a)) \emph{and} P(g(b,c))
+   \newline
+   Q(f(b)) \emph{and} P(g(a,b))
+   \newline
+   Q(f(b)) \emph{and} P(g(a,c))
+   \newline
+   Q(f(b)) \emph{and} P(g(b,c))
+   \newline
+   Q(f(c)) \emph{and} P(g(a,b))
+   \newline
+   Q(f(c)) \emph{and} P(g(a,c))
+   \newline
+   Q(f(c)) \emph{and} P(g(b,c))
+   \newline
+   \newline
+  Finalmente:
+  \newline
+  \newline
+  P(f(a)) \emph{and} Q(g(a,a)
+  \newline
+P(f(a)) \emph{and} Q(g(b,b)
+\newline
+P(f(a)) \emph{and} Q(g(c,c)
+\newline
+P(f(b)) \emph{and} Q(g(a,a)
+\newline
+P(f(b)) \emph{and} Q(g(b,b)
+\newline
+P(f(b)) \emph{and} Q(g(c,c)
+\newline
+P(f(c)) \emph{and} Q(g(a,a)
+\newline
+P(f(c)) \emph{and} Q(g(b,b)
+\newline
+P(f(c)) \emph{and} Q(g(c,c)
+\newline
+P(g(a,a)) \emph{and} Q(f(a))
+\newline
+P(g(a,a)) \emph{and} Q(g(a))
+\newline
+P(g(a,a)) \emph{and} Q(g(a))
+\newline
+P(g(b,b)) \emph{and} Q(g(b))
+\newline
+P(g(b,b)) \emph{and} Q(g(b))
+\newline
+P(g(b,b)) \emph{and} Q(g(b))
+\newline
+P(g(c,c)) \emph{and} Q(g(c))
+\newline
+P(g(c,c)) \emph{and} Q(g(c))
+\newline
+P(g(c,c)) \emph{and} Q(g(c))
+\newline
+   Q(f(a)) \emph{and} P(g(b,a))
+   \newline
+   Q(f(a)) \emph{and} P(g(c,a))
+   \newline
+   Q(f(a)) \emph{and} P(g(c,b))
+   \newline
+   Q(f(b)) \emph{and} P(g(b,a))
+   \newline
+   Q(f(b)) \emph{and} P(g(c,a))
+   \newline
+   Q(f(b)) \emph{and} P(g(c,b))
+   \newline
+   Q(f(c)) \emph{and} P(g(b,a))
+   \newline
+   Q(f(c)) \emph{and} P(g(c,a))
+   \newline
+   Q(f(c)) \emph{and} P(g(c,b))
+   \newline
+   \newline
+d)
+\newline
+\lstset{language=prolog, breaklines=True, basicstyle=\footnotesize}
+\begin{lstlisting}{frame=single}
+p(f(X)) :- q(X, Y), r(Y).
+q(g(X, Y), Z) :- r(X), r(Z), q(f(Z), a).
+q(X, a).
+r(f(f(b))).
+r(c).
+\end{lstlisting}
+\newline
+\newline
+\indent No se puede encontrar un modelo para el programa dado que en la primera f\'ormula,  ya que el int\'rprete al evaluar q(X,Y), dado que Y no esta unificado con ning\'un valor, \'el verifica que exista un predicado emph{q} con dos par\'ametros, como de hecho existe, y por consiguiente va a intentar unificar Y con a. Luego cuando evalue r(a) falla porque r(a) no existe como predicado verdadero.
+\newline
+\newline
+e) r(f(f(b)) y r(c).
+\newline
+\newline
+f) q(X,a).
+\newline
+\newline
+g) H0 = Todo predicado en el conjunto P de predicados no debe tener variables libres, ni antecedentes. En otras palabras, deben ser hechos.
+\newline
+ H1 = Todo predicado en el conjunto P de predicados puede tener variables libres, pero deben ser hechos.
+ \newline
+ Hk = Por cada predicado en el consecuente de cada conjunto de predicados, aplicar recursivamente la formula. K = min {k1,k2,kp} donde p es el numero de predicados en el consecuente. 
+\newline
+\newline
+i) El nivel de q es 0. Si se toma el nivel de los not en  p  y en r como 0, entonces ambos esta\'an a nivel 1. Si se toma al 1, entonces ambos estan al nivel 2.
+\newline
+\newline
+j) Para el nivel 0:
+\newline
+Hk(q(X,Y) :- r(X), p(Y)) = Hk(r(X)) U Hk(p(y))
+\newline
+\indent Hk(r(X)) = Hk-1(not(q(X,b)))
+   \newline
+\indent Hk(p(y)) = HK(q(X,Y) U Hk-1(not(q(X,X))) U Hk-1(not(r(Y)))
+   \newline
+   \newline
+\indent Para el nivel 1:
+  \newline
+Hk(p(X)) U Hk(r(X))
+\newline
+\indent Hk(p(X)) = Hk(q(X,Y) U Hk-1(not(q(X,X))) U Hk-1(not(r(Y)))
+\indent Hk(r(X)) = Hk-1(not(q(X,b)))
+\newline  
+k) Esto se ve afectado debido a que va hacer la recursion de manera infinita.
+\end{document}

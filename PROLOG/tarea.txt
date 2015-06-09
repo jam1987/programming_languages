@@ -1,0 +1,173 @@
+Investigacion:
+
+a) P(x) /\ Q(y)
+
+P(x) : 3
+Q(y) : 3
+1) P(a) /\ Q(a)
+2) P(a) /\ Q(b)
+3) P(a) /\ Q(c)
+4) P(b) /\ Q(a)
+5) P(b) /\ Q(b)
+6) P(b) /\ Q(c)
+7) P(c) /\ Q(a)
+8) P(c) /\ Q(b)
+9) P(c) /\ Q(c)
+
+Total: 9 posibles formulas.
+
+b) Tomando las formulas de la parte d), se logro sacar la siguiente cuenta:
+
+18+9+18+18+9+27=99 posibles formulas.
+
+
+c) P(f(a)) /\ Q(g(a,b))
+   P(f(a)) /\ Q(g(a,c))
+   P(f(a)) /\ Q(g(b,c))
+   P(f(b)) /\ Q(g(a,b))
+   P(f(b)) /\ Q(g(a,c))
+   P(f(b)) /\ Q(g(b,c))
+   P(f(c)) /\ Q(g(a,b))
+   P(f(c)) /\ Q(g(a,c))
+   P(f(c)) /\ Q(g(b,c))
+   P(f(a)) /\ Q(g(b,a))
+   P(f(a)) /\ Q(g(c,a))
+   P(f(a)) /\ Q(g(c,b))
+   P(f(b)) /\ Q(g(b,a))
+   P(f(b)) /\ Q(g(c,a))
+   P(f(b)) /\ Q(g(c,b))
+   P(f(c)) /\ Q(g(b,a))
+   P(f(c)) /\ Q(g(c,a))
+   P(f(c)) /\ Q(g(c,b))
+   
+   P(f(a)) /\ Q(f(a))
+   P(f(a)) /\ Q(f(b))
+   P(f(a)) /\ Q(f(c))
+   P(f(b)) /\ Q(f(a))
+   P(f(b)) /\ Q(f(b))
+   P(f(b)) /\ Q(f(c))
+   P(f(c)) /\ Q(f(a))
+   P(f(c)) /\ Q(f(b))
+   P(f(c)) /\ Q(f(c))
+   
+   P(g(a,b)) /\ Q(g(a,b))
+   P(g(a,b)) /\ Q(g(a,c))
+   P(g(a,b)) /\ Q(g(b,c))
+   P(g(a,b)) /\ Q(g(b,a))
+   P(g(a,b)) /\ Q(g(c,a))
+   P(g(a,b)) /\ Q(g(c,b))
+   P(g(a,c)) /\ Q(g(a,b))
+   P(g(a,c)) /\ Q(g(a,c))
+   P(g(a,c)) /\ Q(g(b,c))
+   P(g(a,c)) /\ Q(g(b,a))
+   P(g(a,c)) /\ Q(g(b,c))
+   P(g(a,c)) /\ Q(g(c,a))
+   P(g(b,c)) /\ Q(g(a,b))
+   P(g(b,c)) /\ Q(g(a,c))
+   P(g(b,c)) /\ Q(g(b,c))
+   P(g(b,c)) /\ Q(g(b,a))
+   P(g(b,c)) /\ Q(g(b,c))
+   P(g(b,c)) /\ Q(g(c,a))
+   
+   P(g(b,a)) /\ Q(g(a,b))
+   P(g(b,a)) /\ Q(g(a,c))
+   P(g(b,a)) /\ Q(g(b,c))
+   P(g(b,a)) /\ Q(g(b,a))
+   P(g(b,a)) /\ Q(g(c,a))
+   P(g(b,a)) /\ Q(g(c,b))
+   P(g(c,a)) /\ Q(g(a,b))
+   P(g(c,a)) /\ Q(g(a,c))
+   P(g(c,a)) /\ Q(g(b,c))
+   P(g(c,a)) /\ Q(g(b,a))
+   P(g(c,a)) /\ Q(g(b,c))
+   P(g(c,a)) /\ Q(g(c,a))
+   P(g(c,b)) /\ Q(g(a,b))
+   P(g(c,b)) /\ Q(g(a,c))
+   P(g(c,b)) /\ Q(g(b,c))
+   P(g(c,b)) /\ Q(g(b,a))
+   P(g(c,b)) /\ Q(g(b,c))
+   P(g(c,b)) /\ Q(g(c,a))
+   
+
+   
+   Luego, dado que la conjuncion es simetrica, podemos obtener lo siguiente:
+   Q(f(a)) /\ P(g(a,b))
+   Q(f(a)) /\ P(g(a,c))
+   Q(f(a)) /\ P(g(b,c))
+   Q(f(b)) /\ P(g(a,b))
+   Q(f(b)) /\ P(g(a,c))
+   Q(f(b)) /\ P(g(b,c))
+   Q(f(c)) /\ P(g(a,b))
+   Q(f(c)) /\ P(g(a,c))
+   Q(f(c)) /\ P(g(b,c))
+   
+  Finalmente:
+  
+  P(f(a)) /\ Q(g(a,a)
+P(f(a)) /\ Q(g(b,b)
+P(f(a)) /\ Q(g(c,c)
+P(f(b)) /\ Q(g(a,a)
+P(f(b)) /\ Q(g(b,b)
+P(f(b)) /\ Q(g(c,c)
+P(f(c)) /\ Q(g(a,a)
+P(f(c)) /\ Q(g(b,b)
+P(f(c)) /\ Q(g(c,c)
+P(g(a,a)) /\ Q(f(a))
+P(g(a,a)) /\ Q(g(a))
+P(g(a,a)) /\ Q(g(a))
+P(g(b,b)) /\ Q(g(b))
+P(g(b,b)) /\ Q(g(b))
+P(g(b,b)) /\ Q(g(b))
+P(g(c,c)) /\ Q(g(c))
+P(g(c,c)) /\ Q(g(c))
+P(g(c,c)) /\ Q(g(c))
+   Q(f(a)) /\ P(g(b,a))
+   Q(f(a)) /\ P(g(c,a))
+   Q(f(a)) /\ P(g(c,b))
+   Q(f(b)) /\ P(g(b,a))
+   Q(f(b)) /\ P(g(c,a))
+   Q(f(b)) /\ P(g(c,b))
+   Q(f(c)) /\ P(g(b,a))
+   Q(f(c)) /\ P(g(c,a))
+   Q(f(c)) /\ P(g(c,b))
+   
+   
+d)
+   p(f(X)) :- q(X, Y), r(Y).
+q(g(X, Y), Z) :- r(X), r(Z), q(f(Z), a).
+q(X, a).
+r(f(f(b))).
+r(c).
+
+No se puede encontrar un modelo para el programa dado que en la primera formula,
+el interprete al evalua q(X,Y), dado que Y no esta unificado con ningun valor, el verifica que
+exista un predicado q con dos parametros, como de hecho existe, y por consiguienye
+va a intentar unificar Y con a. Luego cuando evalue r(a) falla porque r(a) no existe como 
+predicado verdadero.
+
+e) r(f(f(b)) y r(c).
+
+f) q(X,a).
+
+g) H0 = Todo predicado en el conjunto P de predicados no debe tener variables libres, ni ante-
+cedentes. En otras palabras, deben ser hechos.
+ H1 = Todo predicado en el conjunto P de predicados puede tener variables libres, pero deben ser
+ hechos.
+ Hk = Por cada predicado en el consecuente de cada conjunto de predicados, aplicar recursivamente la formula. K 
+ = min {k1,k2,kp} donde p es el numero de predicados en el consecuente. 
+
+i) El nivel de q es 0. Si se toma el nivel de los not en  p  y en r como 0, entonces ambos estan
+a nivel 1. Si se toma al 1, entonces ambos estan al nivel 2.
+
+j) Para el nivel 0:
+
+Hk(q(X,Y) :- r(X), p(Y)) = Hk(r(X)) U Hk(p(y))
+   Hk(r(X)) = Hk-1(not(q(X,b)))
+   Hk(p(y)) = HK(q(X,Y) U Hk-1(not(q(X,X))) U Hk-1(not(r(Y)))
+   
+  Para el nivel 1:
+Hk(p(X)) U Hk(r(X))
+  Hk(p(X)) = Hk(q(X,Y) U Hk-1(not(q(X,X))) U Hk-1(not(r(Y)))
+  Hk(r(X)) = Hk-1(not(q(X,b)))
+  
+k) Esto se ve afectado debido a que va hacer la recursion de manera infinita.

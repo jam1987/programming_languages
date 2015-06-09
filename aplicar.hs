@@ -1,0 +1,1 @@
+aplicar f x = f x

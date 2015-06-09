@@ -1,0 +1,7 @@
+Object subclass: #Circulo
+     instanceVariableNames:     'radio'
+     poolDictionaries:  ''
+
+
+radio:
+    ^radio

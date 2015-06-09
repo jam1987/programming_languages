@@ -1,0 +1,111 @@
+\documentclass[12pt,a4paper,spanish]{article}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+
+\begin{document}
+
+\begin{figure}
+  \centering
+    \includegraphics{/Users/julio/Documents/CI3661/HASKELL/logo.jpg}
+     \\ Universidad Sim\'on Bol\'ivar
+     \\ Depto. De Computaci\'on y Tecnolog\'ia de la Informaci\'on
+     \\ CI3661: Laboratorio de Lenguajes de Programaci\'on 
+\end{figure} 
+
+\title{Tarea 2}
+\author{Williams Mari\~no\\
+        Julio De Abreu 05-38072}
+
+\maketitle
+\newpage
+
+\begin{enumerate}
+\item 
+\newline
+a) 
+\newline
+\lstset{language=Haskell, breaklines=True, basicstyle=\footnotesize}
+\begin{lstlisting}{frame=single}
+Papel :: Origami a
+Valle :: a -> Origami a -> Origami a
+Compuesto :: Origami a -> Origami a
+\end{lstlisting}
+\newline
+\newline
+b) 
+\lstset{language=haskell, breaklines=True, basicstyle=\footnotesize}
+\begin{lstlisting}{frame=single}
+transformarPapel :: b
+transformarValle :: a -> b -> b
+transformarCompuesto :: b -> b
+\end{lstlisting}
+\newline
+\newline
+c) 
+\lstset{language=haskell, breaklines=True, basicstyle=\footnotesize}
+\begin{lstlisting}{frame=single}
+plegarOrigami transPapel transPico trnasValle transCompuesto = plegar
+    where
+        plegar Papel = transPapel
+        plegar (Pico x y) = transPico x (plegar y)
+        plegar (Valle x y) = transValle x (plegar y)
+        plegar (Compuesto x y) = transCompuesto (plegar x) (plegar y)
+\end{lstlisting}
+d)
+\lstset{language=haskell, breaklines=True, basicstyle=\footnotesize}
+\begin{lstlisting}{frame=single}
+sumarOrigami :: (Num a) -> Origami a -> a
+sumarOrigami = plegarOrigami transPapel transPico transValle transCompuesto
+    where
+        transPapel = 0
+        transPico = (+)
+        transValle = (+)
+        transCompuesto = (+)
+\end{lstlisting}
+\newline
+\newline
+e) 
+\lstset{language=haskell, breaklines=True, basicstyle=\footnotesize}
+\begin{lstlisting}{frame=single}
+aplanarOrigami :: Origami a -> [a]
+aplanarOrigami = plegarOrigami transPapel transPico transValle transCompuesto
+    where
+        transPapel = []
+        transPico = (:)
+        transValle = (:)
+        transCompuesto = (:)
+\end{lstlisting}
+\newline
+\newline
+g) n funciones.
+\newline
+\newline
+h) La funcion cons.
+\newline
+\newline
+\emph{Investigaci\'on}
+\newline
+\newline
+a) Tenemos que evaluar la expresi\'on: subs (id const) subs const. Para eso aplicamos la definici\'on de subs: 
+subs x y z = x z (y z). Esto nos da la siguiente expresio\'on: (id const) const (subs  const). Ahora aplicando la definici\'on de id, la expresi\'on queda de la siguiente manera: const const (subs const). Finalmente aplicando la definicion de const, la expresi\'on queda as\'i: const.
+\newline
+\newline 
+b) subs (subs (subs const sub id) const sub) const id 
+\newline
+\newline
+c) id = const () sub
+\newline
+\newline
+d) El c\'alculo SKI es una versi\'on reducida del Lambda C\'alculo. Todas las operaciones del c\'alculo SKI vienen expresadas como \'arboles binarios en sus tres siglas: S,K,I (los cuales se les conoce como combinadores). 
+\newline
+\newline
+\indent La relaci\'on que guarda el C\'alculo SKI con las funciones propuestas es la evaluacion de las operaciones de los combinadores. Esto se puede ver as\'i:
+\newline
+\indent El combinador I retorna un elemento: Ix = x. Esta es la funci\'on Identidad que estaba propuesta.
+\newline
+\indent El combinador K cuando se le aplica a un argumento X, \'este devuelve la funci\'on constante Kx, que luego aplicado a cualquier argumento, devuelve x. En otras palabras: Kxy = x. Esta es la funci\'on const que estaba propuesta.
+\newline
+\indent Finalmente, S es un operador de sustituci\'on. \'Este toma tres argumentos, y retorna el primero aplicado al tercero, el cual es luego aplicado al resultado del segundo argumento aplicado al tercero. En otras palabras: Sxyz = xz(yz). Y esta es la funci\'on subs que fue propuesta.
+\end{document}
